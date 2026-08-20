@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arirang Lanterns | Write Your Wish</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    </head>
+    <body>
+    <div id="sky-bg"></div>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=traditional-asian-melody-113258.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()">🔇</button>
+
+    <div class="container">
+        <div class="sub-title">ARIRANG CONCERT NIGHT</div>
+        <h1 class="main-title">Sky Lantern Release 🌌</h1>
+
+        <div class="box-panel">
+        <p style="margin-top:0; font-size:0.9rem; color: var(--cream-white);">Write your name and concert wish on the silk lantern:</p>
+        <input type="text" id="username" placeholder="Your Name or Bias..." maxlength="15">
+        <input type="text" id="userwish" placeholder="Your Wish (e.g. Health & Arirang)..." maxlength="30">
+        <br>
+        <button class="btn" onclick="submitWish()">Write On Lantern ✧˖°</button>
+        </div>
+
+        <div style="margin-top: 25px; font-size: 0.8rem; color: #887777;">
+        Made with 𖹭.ᐟ by <a href="https://instagram.com/theakth" target="_blank">@theakth</a>
+        </div>
+    </div>
+
+    <script src="JavaScripts/firebaseConfig.js"></script>
+    <script src="JavaScripts/main.js"></script>
+    </body>
+</html>

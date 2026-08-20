@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arirang Lanterns | Release Lantern</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    </head>
+    <body>
+    <div id="sky-bg"></div>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=traditional-asian-melody-113258.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()">🔇</button>
+
+    <div class="container">
+        <div class="sub-title">ARIRANG CONCERT NIGHT</div>
+        <h1 class="main-title">Release Your Lantern 🌌</h1>
+
+        <p style="font-size: 0.85rem; color: var(--cream-white);">Tap the glowing lantern to release it into the night sky!</p>
+        
+        <div class="lantern-stage" onclick="releaseLantern()">
+        <div class="lantern" id="lantern-obj">
+            <div style="font-size:0.75rem; color:var(--cream-white); margin-bottom:5px;">TORONTO 2026</div>
+            <div class="lantern-text" id="display-wish">"Wish text here"</div>
+            <div style="font-size:0.75rem; margin-top:8px; opacity:0.85;" id="display-name">- ARMY</div>
+        </div>
+        </div>
+    </div>
+
+    <script src="JavaScripts/firebaseConfig.js"></script>
+    <script src="JavaScripts/lantern.js"></script>
+    </body>
+</html>

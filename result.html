@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arirang Lanterns | Your Souvenir Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    </head>
+    <body>
+    <div id="sky-bg"></div>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=traditional-asian-melody-113258.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()">🔇</button>
+
+    <div class="container">
+        <div class="sub-title">ARIRANG CONCERT NIGHT</div>
+        <h1 class="main-title">Lantern Souvenir 🌌</h1>
+
+        <div class="souvenir-card">
+        <div class="stamp">아리랑<br>TORONTO</div>
+        <div style="font-size: 0.75rem; color: var(--cream-white); opacity: 0.8; letter-spacing: 1px;">LANTERN RELEASED BY</div>
+        <div style="font-size: 1.4rem; color: var(--cream-white); font-weight: bold; margin: 5px 0 10px 0;" id="card-user">ARMY</div>
+        
+        <div style="background: rgba(255,255,255,0.06); padding: 10px; border-radius: 10px; font-size: 0.85rem; font-style: italic; color: var(--pure-white); margin-bottom: 15px; border: 1px solid rgba(253, 251, 247, 0.1);">
+            <span id="card-wish-text">"Your wish has risen into the sky"</span>
+        </div>
+
+        <div style="font-size: 2.8rem; margin-bottom: 5px;" id="card-icon">🎋</div>
+        <div style="font-size: 1.1rem; font-weight: bold; color: var(--cream-white);" id="card-song">Standard Arirang</div>
+        <p style="font-size: 0.9rem; color: #e0d0d0; line-height: 1.4; font-style: italic;" id="card-lyric">"Arirang lyric quote..."</p>
+
+        <div style="font-size: 0.75rem; color: #887777; border-top: 1px dashed #553333; padding-top: 10px;">
+            TORONTO SPECIAL EDITION • BY @THEAKTH
+        </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--cream-white); margin-top: 15px;">📸 <strong>Screenshot your pull</strong> to share on Story!</p>
+        
+        <button class="btn" id="peek-btn" onclick="toggleSkyView()" style="background: rgba(255,255,255,0.12); border: 1px solid var(--cream-white); margin-bottom: 8px;">👀 Peek Sky Lanterns</button>
+        <br>
+        <button class="btn" onclick="restartApp()" style="background: #100203; border: 1px solid var(--primary-red);">Release Another Lantern 🔄</button>
+    </div>
+
+    <script src="JavaScripts/firebaseConfig.js"></script>
+    <script src="JavaScripts/result.js"></script>
+    </body>
+</html>
