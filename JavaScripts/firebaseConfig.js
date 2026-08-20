@@ -1,7 +1,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyCGcCSby31gZmvbaF-iAB1qc7jZXnwNvdQ",
     authDomain: "arirang-lanterns.firebaseapp.com",
-    databaseURL:"https://console.firebase.google.com/u/0/project/arirang-lanterns/database/arirang-lanterns-default-rtdb/data/~2F",
+    databaseURL:"https://arirang-lanterns-default-rtdb.firebaseio.com",
     projectId: "arirang-lanterns",
     storageBucket: "arirang-lanterns.firebasestorage.app",
     messagingSenderId: "1008494033619",
