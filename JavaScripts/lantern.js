@@ -1,6 +1,6 @@
 const fortunes = [
   { 
-    song: "BTS • KCON Paris Live Arirang", 
+    song: "BTS • KCON Live Arirang", 
     icon: "💜", 
     hangul: "아리랑, 아리랑, 아라리요",
     lyric: "Seven voices, one heart crossing oceans to light up the world together." 

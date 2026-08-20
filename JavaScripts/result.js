@@ -29,7 +29,7 @@ function toggleSkyView() {
     card.style.opacity = "0.15";
     card.style.pointerEvents = "none";
     if (skyBg) skyBg.classList.add('peek-mode');
-    btn.innerText = "Show Card?";
+    btn.innerText = "Show Card";
     isSkyViewActive = true;
   } else {
     card.style.opacity = "1";

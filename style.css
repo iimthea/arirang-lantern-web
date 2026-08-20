@@ -286,3 +286,32 @@ a { color: var(--cream-white); text-decoration: none; font-weight: bold; }
   font-family: 'Nanum Brush Script', cursive;
   font-size: 1.5rem;
 }
+
+/* Ember burst effect when lantern launches */
+#lantern-obj.releasing::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 112, 142, 0.4) 40%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  animation: emberSpark 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes emberSpark {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}

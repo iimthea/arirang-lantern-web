@@ -1,12 +1,12 @@
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyCGcCSby31gZmvbaF-iAB1qc7jZXnwNvdQ",
+    authDomain: "arirang-lanterns.firebaseapp.com",
+    databaseURL:"https://console.firebase.google.com/u/0/project/arirang-lanterns/database/arirang-lanterns-default-rtdb/data/~2F",
+    projectId: "arirang-lanterns",
+    storageBucket: "arirang-lanterns.firebasestorage.app",
+    messagingSenderId: "1008494033619",
+    appId: "1:1008494033619:web:8453526a3192081ce9b226"
+  };
 
 let db = null;
 
@@ -23,9 +23,9 @@ function saveLanternToCloud(name, wish) {
 }
 
 // Stores live wishes so we can continuously loop them
-const wishPool = [
-  { name: "ARMY", wish: "Arirang Forever ❤️" },
-  { name: "Toronto Fan", wish: "Health & Happiness ✨" }
+let wishPool = [
+  { name: "ARMY", wish: "Arirang Forever <3" },
+  { name: "Toronto Fan", wish: "Health & Happiness!" }
 ];
 
 function listenForCommunityLanterns() {
@@ -61,7 +61,7 @@ function spawnAmbientLantern(container, name, wish) {
 
   el.onclick = (e) => {
     e.stopPropagation();
-    alert(`🏮 Lantern by ${name}:\n"${wish}"`);
+    alert(`🏮Lantern by ${name}:\n"${wish}"`);
   };
 
   container.appendChild(el);
