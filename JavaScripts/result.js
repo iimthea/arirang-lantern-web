@@ -18,16 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleSkyView() {
   const card = document.querySelector('.souvenir-card');
   const btn = document.getElementById('peek-btn');
+  const skyBg = document.getElementById('sky-bg');
 
   if (!isSkyViewActive) {
     card.style.opacity = "0.15";
     card.style.pointerEvents = "none";
-    btn.innerText = "🃏 Show Card";
+    if (skyBg) skyBg.classList.add('peek-mode'); // Brings lanterns in front of card
+    btn.innerText = "Show Card";
     isSkyViewActive = true;
   } else {
     card.style.opacity = "1";
     card.style.pointerEvents = "auto";
-    btn.innerText = "👀 Peek Sky Lanterns";
+    if (skyBg) skyBg.classList.remove('peek-mode');
+    btn.innerText = "Peek Sky Lanterns";
     isSkyViewActive = false;
   }
 }

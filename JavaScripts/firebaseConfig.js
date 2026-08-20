@@ -22,15 +22,30 @@ function saveLanternToCloud(name, wish) {
   db.ref('lanterns').push({ name, wish, timestamp: Date.now() });
 }
 
+// Stores live wishes so we can continuously loop them
+const wishPool = [
+  { name: "ARMY", wish: "Arirang Forever ❤️" },
+  { name: "Toronto Fan", wish: "Health & Happiness ✨" }
+];
+
 function listenForCommunityLanterns() {
-  if (!db) return;
   const skyBg = document.getElementById('sky-bg');
   if (!skyBg) return;
 
-  db.ref('lanterns').limitToLast(25).on('child_added', (snapshot) => {
-    const data = snapshot.val();
-    spawnAmbientLantern(skyBg, data.name, data.wish);
-  });
+  // 1. Listen for real-time Firebase entries
+  if (db) {
+    db.ref('lanterns').limitToLast(15).on('child_added', (snapshot) => {
+      const data = snapshot.val();
+      wishPool.push(data); // Add live wishes to our ambient pool
+      spawnAmbientLantern(skyBg, data.name, data.wish);
+    });
+  }
+
+  // 2. Keep spawning lanterns indefinitely every 2.5 seconds
+  setInterval(() => {
+    const randomWish = wishPool[Math.floor(Math.random() * wishPool.length)];
+    spawnAmbientLantern(skyBg, randomWish.name, randomWish.wish);
+  }, 2500);
 }
 
 function spawnAmbientLantern(container, name, wish) {
@@ -39,7 +54,7 @@ function spawnAmbientLantern(container, name, wish) {
   el.innerText = '🏮';
   
   const randomLeft = Math.floor(Math.random() * 88) + 5;
-  const randomDuration = Math.floor(Math.random() * 8) + 10;
+  const randomDuration = Math.floor(Math.random() * 6) + 12; // 12s - 18s float time
   
   el.style.left = `${randomLeft}vw`;
   el.style.animationDuration = `${randomDuration}s`;
