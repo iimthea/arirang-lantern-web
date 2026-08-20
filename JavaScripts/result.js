@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('card-user').innerText = data.name;
   document.getElementById('card-wish-text').innerText = `"${data.wish}"`;
   document.getElementById('card-icon').innerText = data.icon;
-  document.getElementById('card-song').innerText = `🎵 ${data.song}`;
+  document.getElementById('card-song').innerText = `𝄞 ${data.song}`;
+  
+  if (document.getElementById('card-hangul')) {
+    document.getElementById('card-hangul').innerText = data.hangul || '';
+  }
+
   document.getElementById('card-lyric').innerText = `"${data.lyric}"`;
 });
 
@@ -23,8 +28,8 @@ function toggleSkyView() {
   if (!isSkyViewActive) {
     card.style.opacity = "0.15";
     card.style.pointerEvents = "none";
-    if (skyBg) skyBg.classList.add('peek-mode'); // Brings lanterns in front of card
-    btn.innerText = "Show Card";
+    if (skyBg) skyBg.classList.add('peek-mode');
+    btn.innerText = "Show Card?";
     isSkyViewActive = true;
   } else {
     card.style.opacity = "1";
