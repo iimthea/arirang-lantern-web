@@ -52,6 +52,11 @@ const fortunes = [
 let lanternData = { name: "ARMY", wish: "Arirang Forever" };
 
 document.addEventListener("DOMContentLoaded", () => {
+    // so background lanterns start syncing
+    if (typeof listenForCommunityLanterns === 'function') {
+    listenForCommunityLanterns();
+  }
+
   const stored = sessionStorage.getItem('currentLantern');
   if (stored) {
     lanternData = JSON.parse(stored);
