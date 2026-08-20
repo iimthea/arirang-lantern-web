@@ -1,37 +1,37 @@
 const fortunes = [
   { 
-    song: "BTS Group • KCON Paris Live Arirang", 
+    song: "BTS • KCON Paris Live Arirang", 
     icon: "💜", 
     hangul: "아리랑, 아리랑, 아라리요",
-    lyric: "Seven voices, one heart—crossing oceans to light up the world together." 
+    lyric: "Seven voices, one heart crossing oceans to light up the world together." 
   },
   { 
     song: "RM • Gangwon-do Arirang (Poetic Stream)", 
-    icon: "🌿", 
+    icon: "🐨", 
     hangul: "아리 아리랑 쓰리 쓰리랑",
     lyric: "Deep roots carry us through every high mountain pass into a wider horizon." 
   },
   { 
     song: "Jin • Bon Arirang (Classic National Melody)", 
-    icon: "🌙", 
+    icon: "🐹", 
     hangul: "나를 버리고 가시는 님은...",
     lyric: "A bright, timeless light guiding every traveler walking under the midnight sky." 
   },
   { 
     song: "SUGA • Jeongseon Arirang (Haegeum & Beats)", 
-    icon: "🥁", 
+    icon: "🐱", 
     hangul: "눈이 오려나 비가 오려나...",
     lyric: "Turn past trials into loud, triumphant rhythms that echo through history." 
   },
   { 
-    song: "j-hope • Jindo Arirang (Festive Rhythm)", 
-    icon: "☀️", 
+    song: "J-hope • Jindo Arirang (Festive Rhythm)", 
+    icon: "🐿️", 
     hangul: "아리 아리랑 응응응 아라리가 났네!",
     lyric: "Walk over every hill with dancing feet and an unyielding light in your heart." 
   },
   { 
     song: "Jimin • Milyang Arirang (Silk Fan Dance)", 
-    icon: "🌸", 
+    icon: "🐥", 
     hangul: "날 좀 보소, 날 좀 보소",
     lyric: "Flowing with grace and resilience, blooming through winter frost into spring." 
   },
@@ -43,7 +43,7 @@ const fortunes = [
   },
   { 
     song: "Jungkook • Modern Golden Arirang", 
-    icon: "✨", 
+    icon: "🐰", 
     hangul: "아리랑 고개를 넘어간다",
     lyric: "Singing high into the sky, turning every heartfelt wish into pure gold." 
   }

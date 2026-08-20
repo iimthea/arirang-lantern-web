@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
 body {
   margin: 0;
   padding: 20px 15px;
@@ -263,4 +265,24 @@ a { color: var(--cream-white); text-decoration: none; font-weight: bold; }
   right: -12px;
   bottom: -12px;
   border-radius: 50%;
+}
+
+/* Calligraphy Brush Styling */
+#card-hangul {
+  font-family: 'Nanum Brush Script', cursive !important;
+  font-size: 2.2rem !important; /* Brush scripts need a slightly larger font size to shine */
+  color: #ff708e !important;
+  text-shadow: 0 0 10px rgba(255, 112, 142, 0.4);
+  margin: 8px 0 2px 0 !important;
+  letter-spacing: 1px;
+}
+
+/* Optional utility class if you want to use brush font anywhere else */
+.brush-text {
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+#card-wish-text {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 1.5rem;
 }
